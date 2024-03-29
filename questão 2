@@ -1,0 +1,36 @@
+// Função para encontrar o menor número em uma lista
+function encontrarMenorNumero(lista) {
+    var menor = lista[0];
+    for (var i = 1; i < lista.length; i++) {
+        if (lista[i] < menor) {
+            menor = lista[i];
+        }
+    }
+    return menor;
+}
+
+// Função para encontrar o maior número em uma lista
+function encontrarMaiorNumero(lista) {
+    var maior = lista[0];
+    for (var i = 1; i < lista.length; i++) {
+        if (lista[i] > maior) {
+            maior = lista[i];
+        }
+    }
+    return maior;
+}
+
+// Pedindo ao usuário que digite os números separados por vírgula
+var numerosString = prompt("Digite os números separados por vírgula:");
+
+// Convertendo a string de entrada em uma lista de números
+var numeros = numerosString.split(",").map(function(item) {
+    return parseInt(item.trim());
+});
+
+// Encontrando o menor e o maior número na lista
+var menorNumero = encontrarMenorNumero(numeros);
+var maiorNumero = encontrarMaiorNumero(numeros);
+
+// Mostrando os resultados ao usuário
+alert("O menor número digitado é: " + menorNumero + "\nO maior número digitado é: " + maiorNumero);
