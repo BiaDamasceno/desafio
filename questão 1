@@ -1,0 +1,20 @@
+// Função para calcular a média
+function calcularMedia(numero1, numero2, numero3) {
+    var soma = numero1 + numero2 + numero3;
+    var media = soma / 3;
+    return media;
+}
+
+// Pedindo ao usuário para digitar seu nome
+var nome = prompt("Digite seu nome:");
+
+// Pedindo ao usuário para digitar os três números separadamente
+var numero1 = parseFloat(prompt("Olá, " + nome + "! Digite o primeiro número:"));
+var numero2 = parseFloat(prompt("Agora digite o segundo número:"));
+var numero3 = parseFloat(prompt("Por fim, digite o terceiro número:"));
+
+// Calculando a média
+var media = calcularMedia(numero1, numero2, numero3);
+
+// Mostrando o resultado da média para o usuário
+alert("Olá, " + nome + "! A média dos números digitados é: " + media);
